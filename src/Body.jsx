@@ -6,6 +6,8 @@ import Sidebar from "./Sidebar";
 import PlotData from "./PlotData";
 import NullState from "./NullState";
 
+import { apiURL } from "./constants";
+
 const Body = () => {
   const [loading, setLoading] = useState(false);
   const [chartData, setChartData] = useState(null);
@@ -38,7 +40,7 @@ const Body = () => {
     try {
       setLoading(true);
 
-      const res = await axios.get("https://sheetdb.io/api/v1/7u2bgybul3n1r");
+      const res = await axios.get(apiURL);
       const data = res?.data || null;
 
       createOptions(data);
