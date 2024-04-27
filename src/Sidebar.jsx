@@ -2,8 +2,6 @@ import React from "react";
 import { FiExternalLink, FiArrowRight } from "react-icons/fi";
 
 const Sidebar = ({ options, handleSelect, selectedIndex }) => {
-  console.log(options);
-
   return (
     <div className="flex flex-col h-full w-64 items-start justify-between">
       <div className="flex flex-col w-full gap-y-5">
